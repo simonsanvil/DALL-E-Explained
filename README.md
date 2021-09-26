@@ -1,9 +1,14 @@
 # DALL-E-Explained
+
 Description and applications of OpenAI's paper about the DALL-E model and other text-to-image generation schemes (CLIP-dVAE)
+
 
 ## What is this notebook about?
 
-The primary reason of the notebook in this repository is to give a brief explanation about OpenAI's *Zero Shot Text-to-Image Generation* <a href="#scrollTo=iKP0tnHaiTyl">(1)</sub></a> paper where they introduce *DALL-E*, a deep-leaning model to generate images directly from  a text-prompt. I will also showcase some of the outputs that can be accomplished with the model described in their paper and walkthrough how you can generate your own images from text-captions with this notebook (althought using a different methology than the one described in the paper).
+The primary reason of the notebook in this repository is to give a brief explanation about OpenAI's [*Zero Shot Text-to-Image Generation paper*](https://arxiv.org/pdf/2102.12092.pdf) (1) where they introduce *DALL-E*, a deep-leaning model to generate images directly from  a text-prompt. I will also showcase some of the outputs that can be accomplished with the model described in their paper and walkthrough how you can generate your own images from text-captions with this notebook (althought using a different methology than the one described in the paper).
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/simonsanvil/DALL-E-Explained/blob/main/DALL_E_CLIP_VAE_Explained.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/simonsanvil/DALL-E-Explained/HEAD)
 
 ---------------
 
