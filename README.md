@@ -77,9 +77,8 @@ The beauty about CLIP is that the network is fully differentiable and therefore 
 |:--: |
 |Backpropagating through CLIP and the generator network*|
 
-----
-
 * ***Image Sources:** Youtube: Yannic Kilcher's - [What Happens when OpenAI's CLIP meets BigGAN](https://www.youtube.com/watch?v=rR5_emVeyBk&t=364s)
+----
 
 **In this notebook you will find the implementation of the methodology described above to do Zero-Shot Text-to-Image generation**. Most of the code in the remaining of this notebook was adapted from other notebooks published by Ryan Murdoch <a href="#scrollTo=iKP0tnHaiTyl">(4)</sub></a>. I've only expanded on the ways that the outputs are visualized and integrated the implementations of two different Generators into one notebook, such that is possible to choose between the dVAE that is used by DALL-E <a href="#scrollTo=iKP0tnHaiTyl">(5)</sub></a> and a VQGAN created by CompVis that uses Taming Transformers <a href="#scrollTo=iKP0tnHaiTyl">(3)</sub></a>.
 
