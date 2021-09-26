@@ -1,6 +1,6 @@
 # DALL-E-Explained
 
-Description and applications of OpenAI's paper about the DALL-E model and other text-to-image generation schemes (CLIP-dVAE)
+Description and applications of OpenAI's paper about the DALL-E model and other text-to-image generation schemes (CLIP guided image generation)
 
 
 ## What is this notebook about?
@@ -54,7 +54,7 @@ The results published in their blog and paper show an extremely good capability 
 
 -------
 
-# Implementation of another Text-to-Image Generation Scheme (CLIP-VAE)
+# Implementation of another Text-to-Image Generation Scheme (CLIP guided)
 
 Even though a lot of people would love to play with DALL-E and/or see more of it in action, OpenAI hasn't (sadly) fully released it to the public yet and they haven't expressed any plans to do so in the nearby future. They've only released the dVAE described in the first stage of their paper. But, even thought it can be used to map and reconstruct images to and from the latent space perfectly, is missing the important part that is actually able to represent text as images (the transformer). 
 
@@ -64,7 +64,9 @@ Because of that and until they release the full model (if ever), we are bound to
 
 ## Text-to-Image generation with CLIP
 
-**What is CLIP?:** CLIP was introduced by OpenAI in [another blog post](https://openai.com/blog/clip/) the same day that they introduced DALL-E. CLIP is a neural network that is extremely good at telling whether an image and a text label fit together, that is, given an image and a any set of text labels, CLIP will output how likely each label is to be representative of the image. So if you show CLIP an image of a cat and the labels `["a dog","a giraffe","a house", "a cat"]` it will assign more probability to the labels related to the cat picture (`a cat` in this case). 
+**What is CLIP?** 
+
+CLIP was introduced by OpenAI in [another blog post](https://openai.com/blog/clip/) the same day that they introduced DALL-E. CLIP is a neural network that is extremely good at telling whether an image and a text label fit together, that is, given an image and a any set of text labels, CLIP will output how likely each label is to be representative of the image. So if you show CLIP an image of a cat and the labels `["a dog","a giraffe","a house", "a cat"]` it will assign more probability to the labels related to the cat picture (`a cat` in this case). 
 
 | <img src="https://www.dropbox.com/s/4ucl5y878kaddor/clip_example.png?raw=1" width = "500px"></img> | <img src="https://www.dropbox.com/s/vemxyq9fks119yl/is_fully_differentiable.png?raw=1" width = "500px"></img>|
 |:--:|  :--: |
@@ -80,9 +82,9 @@ The beauty about CLIP is that the network is fully differentiable and therefore 
 * ***Image Sources:** Youtube: Yannic Kilcher's - [What Happens when OpenAI's CLIP meets BigGAN](https://www.youtube.com/watch?v=rR5_emVeyBk&t=364s)
 ----
 
-**In this notebook you will find the implementation of the methodology described above to do Zero-Shot Text-to-Image generation**. Most of the code in the remaining of this notebook was adapted from other notebooks published by Ryan Murdoch <a href="#scrollTo=iKP0tnHaiTyl">(4)</sub></a>. I've only expanded on the ways that the outputs are visualized and integrated the implementations of two different Generators into one notebook, such that is possible to choose between the dVAE that is used by DALL-E <a href="#scrollTo=iKP0tnHaiTyl">(5)</sub></a> and a VQGAN created by CompVis that uses Taming Transformers <a href="#scrollTo=iKP0tnHaiTyl">(3)</sub></a>.
+**In the notebook in this repository you will find the implementation of the methodology described above to do Zero-Shot Text-to-Image generation**. Most of the code in it was adapted from other notebooks published by Ryan Murdoch (4). I've only expanded on the ways that the outputs are visualized and integrated the implementations of two different Generators into one notebook, such that is possible to choose between the dVAE that is used by DALL-E (5) and a VQGAN created by CompVis that uses Taming Transformers (3)
 
-**The following are some examples of media I've been able to generate with the notebook in this repository:**
+**The following are some examples of media I've been able to generate with this notebook:**
 
 | Input: "A city landscape in the style of Van Gogh" (DALL-E dVAE) | Input: Selfie of me + "A cat" (progression video, VQGAN) |
 |:--:|  :--: |
