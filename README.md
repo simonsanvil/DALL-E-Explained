@@ -1,6 +1,6 @@
 # DALL-E-Explained
 
-Description and applications of OpenAI's paper about the DALL-E model and other text-to-image generation schemes (CLIP guided image generation)
+Description and applications of OpenAI's paper about the DALL-E model and other (CLIP guided) text-to-image generation schemes.
 
 
 ## What is this notebook about?
