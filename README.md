@@ -1,4 +1,4 @@
-# DALL-E-Xplained
+# DALL-E-Explained
 
 Description and applications of OpenAI's paper about the DALL-E model and other (CLIP guided) text-to-image generation schemes.
 
