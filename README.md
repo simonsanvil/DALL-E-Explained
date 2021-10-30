@@ -54,7 +54,7 @@ The results published in their blog and paper show an extremely good capability 
 
 -------
 
-# Implementation of another Text-to-Image Generation Scheme (CLIP guided)
+# Implementation of another Text-to-Image Generation Scheme using OpenAI's CLIP
 
 Even though a lot of people would love to play with DALL-E and/or see more of it in action, OpenAI hasn't (sadly) fully released it to the public yet and they haven't expressed any plans to do so in the nearby future. They've only released the dVAE described in the first stage of their paper. But, even thought it can be used to map and reconstruct images to and from the latent space perfectly, is missing the important part that is actually able to represent text as images (the transformer). 
 
