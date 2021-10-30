@@ -56,11 +56,11 @@ The results published in their blog and paper show an extremely good capability 
 
 # Implementation of another Text-to-Image Generation Scheme using OpenAI's CLIP
 
-Even though a lot of people would love to play with DALL-E and/or see more of it in action, OpenAI hasn't (sadly) fully released it to the public yet and they haven't expressed any plans to do so in the nearby future. They've only released the dVAE described in the first stage of their paper. But, even thought it can be used to map and reconstruct images to and from the latent space perfectly, is missing the important part that is actually able to represent text as images (the transformer). 
+Even though a lot of people would love to play with DALL-E and/or see more of it in action, OpenAI hasn't fully released it to the public yet and they sadly haven't expressed any plans to do so in the nearby future. What they did do is release the dVAE described in the first stage of their paper. But, even thought it can be used to map and reconstruct existing images to and from its latent space, is missing the important part that is actually able to represent text as images (the transformer). 
 
-It is not needed to mention also that for most people and companies it is prohibitely expensive to attempt to train a model as large as DALL-E for themselves (would cost more than a hundred thousands of dollars to train such model!). 
+Additionall, for most people and companies it is prohibitely expensive to attempt to train a model as large as DALL-E for themselves (would cost more than a hundred thousands of dollars to train such model!). Because of that and until they release the full model (if ever), we are bound to look or come up with other schemes that are able to do text-to-image generation in a different way. 
 
-Because of that and until they release the full model (if ever), we are bound to look or come up with other schemes that are able to do text-to-image generation in a different way. Ryan Murdoch <a href="#scrollTo=iKP0tnHaiTyl">(4)</sub></a> is one that has come up with a simple scheme to accomplish this. He implemented a method that combines [CLIP](https://arxiv.org/abs/2103.00020) and a generative model (such as the dVAE DALL-E uses), to iteratively generate images that assimilate a text input. 
+[Ryan Murdoch](https://twitter.com/advadnoun) is one that has come up with a simple scheme to accomplish this. He invented a method to combine OpenAI's own [CLIP](https://arxiv.org/abs/2103.00020) with any image generative model (like DALL-E's dVAE), to generate images from any text prompt. 
 
 ## Text-to-Image generation with CLIP
 
@@ -84,11 +84,13 @@ The beauty about CLIP is that the network is fully differentiable and therefore 
 
 **In the notebook in this repository you will find the implementation of the methodology described above to do Zero-Shot Text-to-Image generation**. Most of the code in it was adapted from other notebooks published by Ryan Murdoch (4). I've only expanded on the ways that the outputs are visualized and integrated the implementations of two different Generators into one notebook, such that is possible to choose between the dVAE that is used by DALL-E (5) and a VQGAN created by CompVis that uses Taming Transformers (3)
 
-**The following are some examples of media I've been able to generate with this notebook:**
+**The following are some examples of media I've been able to generate with this method:**
 
 | Input: "A city landscape in the style of Van Gogh" (DALL-E dVAE) | Input: Selfie of me + "A cat" (progression video, VQGAN) |
 |:--:|  :--: |
 |![cityscape in the style of Van Gogh](https://www.dropbox.com/s/53j6v0cm4gj9tx2/cityscape-van-gogh-dalledvae.jpeg?raw=1) |  ![me+cat = gif](https://media.giphy.com/media/FK08sYn8tLA6O1jOOd/giphy.gif) |
+
+While the results of using this method don't seem to be as realistic as what DALL-E does they are still very impresive plus extremely fun to play with.
 
 ------
 # Credits and References:
