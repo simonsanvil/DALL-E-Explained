@@ -90,7 +90,7 @@ The beauty about CLIP is that the network is fully differentiable and therefore 
 |:--:|  :--: |
 |![cityscape in the style of Van Gogh](https://www.dropbox.com/s/53j6v0cm4gj9tx2/cityscape-van-gogh-dalledvae.jpeg?raw=1) |  ![me+cat = gif](https://media.giphy.com/media/FK08sYn8tLA6O1jOOd/giphy.gif) |
 
-While the results of using this method don't seem to be as realistic as what DALL-E does they are still very impresive plus extremely fun to play with.
+While the results of using this method don't seem to be as realistic as what DALL-E does they are still very impresive (and extremely fun to play with!).
 
 ------
 # Credits and References:
